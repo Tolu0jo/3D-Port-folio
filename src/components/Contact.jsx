@@ -5,6 +5,11 @@ import { styles } from '../style';
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+
+
+//serviceId service_2ns730e
+//templateid: template_fmqak9b
+//publickey:plz8DeAnLC-TzfQTc
 const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
@@ -13,10 +18,39 @@ const Contact = () => {
     email: "",
     message: ""
   });
-  const handleChange = () => {
-
+  const handleChange = (e) => {
+   const {name,value} = e.target;
+   setForm({...form,[name]:value})
+   
   }
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+     e.preventDefault()
+     setLoading(true)
+
+     emailjs.send(
+      "service_2ns730e",
+     "template_fmqak9b",
+     {
+    from_name:form.name,
+    to_name:"Tolulope Ojo",
+    from_email:form.email,
+    to_email:"ojotolulope137@gmail.com",
+    message: form.message
+     },
+     "plz8DeAnLC-TzfQTc"
+     ).then(()=>{
+      setLoading(false);
+      alert("Thank you,I will get back to you as soon as possible")
+      setForm({
+        name: "",
+        email: "",
+        message: ""
+      });
+     },(error)=>{
+      setLoading(false);
+      console.log(error);
+      alert("Something went wrong")
+     });
 
   }
   return (
