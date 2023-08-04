@@ -45,7 +45,7 @@ const Contact = () => {
         name: "",
         email: "",
         message: ""
-      });
+      })
      },(error)=>{
       setLoading(false);
       console.log(error);
