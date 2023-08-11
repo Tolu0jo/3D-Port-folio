@@ -2,10 +2,14 @@ import {
     mobile,
     backend,
     creator,
+    preclinic,
     web,
+    blogapp,
     javascript,
     typescript,
     html,
+    website,
+    Decagon,
     css,
     reactjs,
     redux,
@@ -13,16 +17,15 @@ import {
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+    techniche,
+    express,
+ 
     carrent,
     jobit,
     tripguide,
     threejs,
+    gamehub
   } from "../assets";
   
   export const navLinks = [
@@ -42,21 +45,23 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "React Native Developer",
-      icon: mobile,
+      title: "Full Stack Developer",
+      icon: creator,
     },
     {
       title: "Backend Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Frontend Developer",
+      icon: web,
     },
+    {
+      title: "React Native Developer",
+      icon: mobile,
+    },
+   
+
   ];
   
   const technologies = [
@@ -77,6 +82,14 @@ import {
       icon: typescript,
     },
     {
+      name: "Node JS",
+      icon: nodejs,
+    },
+    {
+      name: "Express JS",
+      icon: express,
+    },
+    {
       name: "React JS",
       icon: reactjs,
     },
@@ -85,13 +98,14 @@ import {
       icon: redux,
     },
     {
+      name: "docker",
+      icon: docker,
+    },
+    {
       name: "Tailwind CSS",
       icon: tailwind,
     },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
+  
     {
       name: "MongoDB",
       icon: mongodb,
@@ -104,69 +118,37 @@ import {
       name: "git",
       icon: git,
     },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+   
   ];
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "Full Stack Developer",
+      company_name: "Decagon",
+      icon: Decagon,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "Jan 2023 - PRESENT",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Conducting testing, debugging, and optimization of apps to improve performance and user experience.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Implementing best practices and design patterns to deliver maintainable and extensible code..",
         "Participating in code reviews and providing constructive feedback to other developers.",
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Web Developer-Intern",
+      company_name: "TechNiche",
+      icon: techniche,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "May 2022 - Nov 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed and maintained web applications using React.js and other related technologies.",
+        "Worked on a variety of projects involving backend development and  integration with frontend.",
+        "Implemented responsive design and ensuring cross-browser compatibility.",
+        "Participated in code reviews and providing constructive feedback to other developers.",
       ],
     },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
+    
   ];
   
   const testimonials = [
@@ -198,33 +180,54 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Game Hub",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Web-based platform that allows users to keeps track of new video game releases, updates, and availability on different game platforms.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "Chakra UI",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "rawg.io",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: gamehub,
+      source_code_link: "https://react-game-hub-lovat.vercel.app/",
     },
     {
-      name: "Job IT",
+      name: "Blog",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "A blog app that provides a user-friendly interface that enables, to share their thoughts, opinions, experiences, and expertise on various topics with a broader audience.",
       tags: [
         {
-          name: "react",
+          name: "nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "mysql",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: blogapp,
+      source_code_link: "https://github.com/Tolu0jo/Blog-App.git",
+    },
+    {
+      name: "Preclinic",
+      description:
+        "Patient management web application that enables doctors to tracking and managing patients' health statuses, and  accessing patient information efficiently.",
+      tags: [
+        {
+          name: "mongodb",
           color: "blue-text-gradient",
         },
         {
@@ -232,34 +235,14 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
           name: "css",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: preclinic,
+      source_code_link: "https://hospital-management-system-rim8.onrender.com/",
     },
+   
   ];
   
   export { services, technologies, experiences, testimonials, projects };

@@ -18,7 +18,7 @@ items-center py-5 fixed top-0 z-20 bg-primary`}>
     setActive("");
     window.scrollTo(0,0)
   }}>
-    <img src={logo1} alt="logo" className='w-9 h-9 object-contain'/>
+    <img src={tolu} alt="logo" className='w-10 h-10 object-contain rounded-full'/>
     <p className='text-white text-[18px] font-bold cursor-pointer flex'>Tolulope 
     &nbsp; <span
     className='sm:block hidden'> | &nbsp;OJO</span></p>

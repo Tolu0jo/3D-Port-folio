@@ -23,13 +23,13 @@ const Contact = () => {
    setForm({...form,[name]:value})
    
   }
+  
   const handleSubmit = (e) => {
      e.preventDefault()
      setLoading(true)
 
      emailjs.send(
-      "service_2ns730e",
-     "template_fmqak9b",
+      "service_2ns730e","template_fmqak9b",
      {
     from_name:form.name,
     to_name:"Tolulope Ojo",
@@ -37,8 +37,9 @@ const Contact = () => {
     to_email:"ojotolulope137@gmail.com",
     message: form.message
      },
-     "plz8DeAnLC-TzfQTc"
+     "5uBbDcsI2frehQgcO"
      ).then(()=>{
+    console.log(form)
       setLoading(false);
       alert("Thank you,I will get back to you as soon as possible")
       setForm({
@@ -46,7 +47,7 @@ const Contact = () => {
         email: "",
         message: ""
       })
-     },(error)=>{
+     }).catch((error)=>{
       setLoading(false);
       console.log(error);
       alert("Something went wrong")
@@ -73,7 +74,8 @@ const Contact = () => {
         </span>
         <input
         type='text'
-        name='name'
+        name={"name"}
+        value={form.name}
         onChange={handleChange}
         placeholder="What's your name?"
         className=' bg-tertiary py-4 px-6 placeholder:text-secondary 
@@ -86,7 +88,8 @@ const Contact = () => {
         </span>
         <input
         type='email'
-        name='email'
+        name={"email"}
+        value={form.email}
         onChange={handleChange}
         placeholder="What's your email?"
         className=' bg-tertiary py-4 px-6 placeholder:text-secondary 
@@ -99,7 +102,8 @@ const Contact = () => {
         </span>
         <textarea
         rows="7"
-        name='message'
+        name={"message"}
+        value={form.message}
         onChange={handleChange}
         placeholder="What's your message?"
         className=' bg-tertiary py-4 px-6 placeholder:text-secondary 
@@ -107,6 +111,7 @@ const Contact = () => {
 
       </label>
       <button type="submit"
+      value={"Send"}
       className='bg-tertiary py-3 px-8 m-auto outline-none w-fit text-white font-bold 
       shadow-md shadow-primary rounded-xl'>
         {loading?"Sending...":"Send"}
